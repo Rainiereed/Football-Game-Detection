@@ -1,0 +1,684 @@
+.videoContainer {
+    position: relative;
+}
+
+.ball {
+    width: 30px;
+    height: 30px;
+    border: 1.5px solid rgb(25, 216, 41);
+    position: absolute;
+    left: 472px;
+    top: 205px;
+
+}
+
+.player0 {
+    width: 13.7px;
+    height: 22px;
+    position: absolute;
+    left: 680.7px;
+    top: 148.3px;
+    --b: 1.5px;
+    /* thickness of the border */
+    --c: rgb(247, 9, 9);
+    /* color of the border */
+    --w: 5px;
+    /* width of border */
+
+
+    border: var(--b) solid transparent;
+    /* space for the border */
+    background:
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) bottom right,
+        linear-gradient(var(--c), var(--c)) bottom right;
+    background-size: var(--b) var(--w), var(--w) var(--b);
+    background-origin: border-box;
+    background-repeat: no-repeat;
+}
+
+.player1 {
+    width: 14.3px;
+    height: 21px;
+    position: absolute;
+    left: 963px;
+    top: 148.6px;
+    --b: 1.5px;
+    /* thickness of the border */
+    --c: rgb(247, 9, 9);
+    /* color of the border */
+    --w: 5px;
+    /* width of border */
+
+
+    border: var(--b) solid transparent;
+    /* space for the border */
+    background:
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) bottom right,
+        linear-gradient(var(--c), var(--c)) bottom right;
+    background-size: var(--b) var(--w), var(--w) var(--b);
+    background-origin: border-box;
+    background-repeat: no-repeat;
+}
+
+.player2 {
+    width: 15.3px;
+    height: 29.3px;
+    position: absolute;
+    left: 463px;
+    top: 212px;
+    --b: 1.5px;
+    /* thickness of the border */
+    --c: rgb(247, 9, 9);
+    /* color of the border */
+    --w: 5px;
+    /* width of border */
+
+
+    border: var(--b) solid transparent;
+    /* space for the border */
+    background:
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) bottom right,
+        linear-gradient(var(--c), var(--c)) bottom right;
+    background-size: var(--b) var(--w), var(--w) var(--b);
+    background-origin: border-box;
+    background-repeat: no-repeat;
+}
+
+.player3 {
+    width: 14.33px;
+    height: 29.3px;
+    position: absolute;
+    left: 998.9px;
+    top: 135.3px;
+    --b: 1.5px;
+    /* thickness of the border */
+    --c: rgb(247, 9, 9);
+    /* color of the border */
+    --w: 5px;
+    /* width of border */
+
+
+    border: var(--b) solid transparent;
+    /* space for the border */
+    background:
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) bottom right,
+        linear-gradient(var(--c), var(--c)) bottom right;
+    background-size: var(--b) var(--w), var(--w) var(--b);
+    background-origin: border-box;
+    background-repeat: no-repeat;
+}
+
+.player4 {
+    width: 16px;
+    height: 32.8px;
+    position: absolute;
+    left: 509.6px;
+    top: 214px;
+    --b: 1.5px;
+    /* thickness of the border */
+    --c: rgb(247, 9, 9);
+    /* color of the border */
+    --w: 5px;
+    /* width of border */
+
+
+    border: var(--b) solid transparent;
+    /* space for the border */
+    background:
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) bottom right,
+        linear-gradient(var(--c), var(--c)) bottom right;
+    background-size: var(--b) var(--w), var(--w) var(--b);
+    background-origin: border-box;
+    background-repeat: no-repeat;
+}
+
+.player5 {
+    width: 18px;
+    height: 20.9px;
+    position: absolute;
+    left: 526.2px;
+    top: 204px;
+    --b: 1.5px;
+    /* thickness of the border */
+    --c: rgb(8, 43, 245);
+    /* color of the border */
+    --w: 5px;
+    /* width of border */
+
+
+    border: var(--b) solid transparent;
+    /* space for the border */
+    background:
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) bottom right,
+        linear-gradient(var(--c), var(--c)) bottom right;
+    background-size: var(--b) var(--w), var(--w) var(--b);
+    background-origin: border-box;
+    background-repeat: no-repeat;
+}
+
+.player6 {
+    width: 18px;
+    height: 35.9px;
+    position: absolute;
+    left: 733px;
+    top: 203px;
+    --b: 1.5px;
+    /* thickness of the border */
+    --c: rgb(8, 43, 245);
+    /* color of the border */
+    --w: 6px;
+    /* width of border */
+
+    border: var(--b) solid transparent;
+    /* space for the border */
+    background:
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) bottom right,
+        linear-gradient(var(--c), var(--c)) bottom right;
+    background-size: var(--b) var(--w), var(--w) var(--b);
+    background-origin: border-box;
+    background-repeat: no-repeat;
+}
+
+.player7 {
+    width: 11px;
+    height: 25.5px;
+    position: absolute;
+    left: 756.5px;
+    top: 177.7px;
+    --b: 1.5px;
+    /* thickness of the border */
+    --c: rgb(247, 9, 9);
+    /* color of the border */
+    --w: 5px;
+    /* width of border */
+
+    border: var(--b) solid transparent;
+    /* space for the border */
+    background:
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) bottom right,
+        linear-gradient(var(--c), var(--c)) bottom right;
+    background-size: var(--b) var(--w), var(--w) var(--b);
+    background-origin: border-box;
+    background-repeat: no-repeat;
+}
+
+.player8 {
+    width: 12.7px;
+    height: 26.9px;
+    position: absolute;
+    left: 766px;
+    top: 152.3px;
+    --b: 1.5px;
+    /* thickness of the border */
+    --c: rgb(8, 43, 245);
+    /* color of the border */
+    --w: 6px;
+    /* width of border */
+
+    border: var(--b) solid transparent;
+    /* space for the border */
+    background:
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) bottom right,
+        linear-gradient(var(--c), var(--c)) bottom right;
+    background-size: var(--b) var(--w), var(--w) var(--b);
+    background-origin: border-box;
+    background-repeat: no-repeat;
+}
+
+.player9 {
+    width: 14.7px;
+    height: 29.7px;
+    position: absolute;
+    left: 922.3px;
+    top: 171px;
+    --b: 1.5px;
+    /* thickness of the border */
+    --c: rgb(247, 9, 9);
+    /* color of the border */
+    --w: 5px;
+    /* width of border */
+
+    border: var(--b) solid transparent;
+    /* space for the border */
+    background:
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) bottom right,
+        linear-gradient(var(--c), var(--c)) bottom right;
+    background-size: var(--b) var(--w), var(--w) var(--b);
+    background-origin: border-box;
+    background-repeat: no-repeat;
+}
+
+.player10 {
+    width: 17.6px;
+    height: 26.6px;
+    position: absolute;
+    left: 1028.8px;
+    top: 140.3px;
+    --b: 1.5px;
+    /* thickness of the border */
+    --c: rgb(247, 9, 9);
+    /* color of the border */
+    --w: 5px;
+    /* width of border */
+
+    border: var(--b) solid transparent;
+    /* space for the border */
+    background:
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) bottom right,
+        linear-gradient(var(--c), var(--c)) bottom right;
+    background-size: var(--b) var(--w), var(--w) var(--b);
+    background-origin: border-box;
+    background-repeat: no-repeat;
+}
+
+.player11 {
+    width: 25.7px;
+    height: 41.2px;
+    position: absolute;
+    left: 290.4px;
+    top: 319px;
+    --b: 1.5px;
+    /* thickness of the border */
+    --c: rgb(247, 9, 9);
+    /* color of the border */
+    --w: 5px;
+    /* width of border */
+
+    border: var(--b) solid transparent;
+    /* space for the border */
+    background:
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) bottom right,
+        linear-gradient(var(--c), var(--c)) bottom right;
+    background-size: var(--b) var(--w), var(--w) var(--b);
+    background-origin: border-box;
+    background-repeat: no-repeat;
+}
+
+.player12 {
+    width: 12.3px;
+    height: 25.6px;
+    position: absolute;
+    left: 936.3px;
+    top: 153px;
+    --b: 1.5px;
+    /* thickness of the border */
+    --c: rgb(8, 43, 245);
+    /* color of the border */
+    --w: 6px;
+    /* width of border */
+
+    border: var(--b) solid transparent;
+    /* space for the border */
+    background:
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) bottom right,
+        linear-gradient(var(--c), var(--c)) bottom right;
+    background-size: var(--b) var(--w), var(--w) var(--b);
+    background-origin: border-box;
+    background-repeat: no-repeat;
+}
+
+.player13 {
+    width: 27.7px;
+    height: 62.5px;
+    position: absolute;
+    left: 986.7px;
+    top: 282px;
+    --b: 1.5px;
+    /* thickness of the border */
+    --c: rgb(8, 43, 245);
+    /* color of the border */
+    --w: 6px;
+    /* width of border */
+
+    border: var(--b) solid transparent;
+    /* space for the border */
+    background:
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) bottom right,
+        linear-gradient(var(--c), var(--c)) bottom right;
+    background-size: var(--b) var(--w), var(--w) var(--b);
+    background-origin: border-box;
+    background-repeat: no-repeat;
+}
+
+.player14 {
+    width: 20.3px;
+    height: 39px;
+    position: absolute;
+    left: 813.3px;
+    top: 173px;
+    --b: 1.5px;
+    /* thickness of the border */
+    --c: rgb(8, 43, 245);
+    /* color of the border */
+    --w: 5px;
+    /* width of border */
+
+    border: var(--b) solid transparent;
+    /* space for the border */
+    background:
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) bottom right,
+        linear-gradient(var(--c), var(--c)) bottom right;
+    background-size: var(--b) var(--w), var(--w) var(--b);
+    background-origin: border-box;
+    background-repeat: no-repeat;
+}
+
+.player15 {
+    width: 22.3px;
+    height: 45.3px;
+    position: absolute;
+    left: 860.7px;
+    top: 205.3px;
+    --b: 1.5px;
+    /* thickness of the border */
+    --c: rgb(8, 43, 245);
+    /* color of the border */
+    --w: 5px;
+    /* width of border */
+
+    border: var(--b) solid transparent;
+    /* space for the border */
+    background:
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) bottom right,
+        linear-gradient(var(--c), var(--c)) bottom right;
+    background-size: var(--b) var(--w), var(--w) var(--b);
+    background-origin: border-box;
+    background-repeat: no-repeat;
+}
+
+.player16 {
+    width: 45.3px;
+    height: 83.4px;
+    position: absolute;
+    left: 755px;
+    top: 412px;
+    --b: 1.5px;
+    /* thickness of the border */
+    --c: rgb(247, 9, 9);
+    /* color of the border */
+    --w: 5px;
+    /* width of border */
+
+    border: var(--b) solid transparent;
+    /* space for the border */
+    background:
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) bottom right,
+        linear-gradient(var(--c), var(--c)) bottom right;
+    background-size: var(--b) var(--w), var(--w) var(--b);
+    background-origin: border-box;
+    background-repeat: no-repeat;
+}
+
+.player17 {
+    width: 15.3px;
+    height: 34px;
+    position: absolute;
+    left: 1190.8px;
+    top: 172.3px;
+    --b: 1.5px;
+    /* thickness of the border */
+    --c: rgb(8, 43, 245);
+    /* color of the border */
+    --w: 5px;
+    /* width of border */
+
+    border: var(--b) solid transparent;
+    /* space for the border */
+    background:
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) bottom right,
+        linear-gradient(var(--c), var(--c)) bottom right;
+    background-size: var(--b) var(--w), var(--w) var(--b);
+    background-origin: border-box;
+    background-repeat: no-repeat;
+}
+
+.player18 {
+    width: 16.7px;
+    height: 36.2px;
+    position: absolute;
+    left: 1170px;
+    top: 193px;
+    --b: 1.5px;
+    /* thickness of the border */
+    --c: rgb(247, 9, 9);
+    /* color of the border */
+    --w: 5px;
+    /* width of border */
+
+
+    border: var(--b) solid transparent;
+    /* space for the border */
+    background:
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) bottom right,
+        linear-gradient(var(--c), var(--c)) bottom right;
+    background-size: var(--b) var(--w), var(--w) var(--b);
+    background-origin: border-box;
+    background-repeat: no-repeat;
+}
+
+.player19 {
+    width: 22.6px;
+    height: 47.2px;
+    position: absolute;
+    left: 1184.6px;
+    top: 236.6px;
+    --b: 1.5px;
+    /* thickness of the border */
+    --c: rgb(8, 43, 245);
+    /* color of the border */
+    --w: 5px;
+    /* width of border */
+
+    border: var(--b) solid transparent;
+    /* space for the border */
+    background:
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) bottom right,
+        linear-gradient(var(--c), var(--c)) bottom right;
+    background-size: var(--b) var(--w), var(--w) var(--b);
+    background-origin: border-box;
+    background-repeat: no-repeat;
+}
+
+.player20 {
+    width: 12px;
+    height: 20px;
+    position: absolute;
+    left: 1216.4px;
+    top: 142px;
+    --b: 1.5px;
+    /* thickness of the border */
+    --c: rgb(8, 43, 245);
+    /* color of the border */
+    --w: 5px;
+    /* width of border */
+
+    border: var(--b) solid transparent;
+    /* space for the border */
+    background:
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) bottom right,
+        linear-gradient(var(--c), var(--c)) bottom right;
+    background-size: var(--b) var(--w), var(--w) var(--b);
+    background-origin: border-box;
+    background-repeat: no-repeat;
+}
+
+.player21 {
+    width: 16px;
+    height: 35.1px;
+    position: absolute;
+    left: 1190.3px;
+    top: 193.7px;
+    --b: 1.5px;
+    /* thickness of the border */
+    --c: rgb(8, 43, 245);
+    /* color of the border */
+    --w: 5px;
+    /* width of border */
+
+    border: var(--b) solid transparent;
+    /* space for the border */
+    background:
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) top left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) bottom left,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) top right,
+        linear-gradient(var(--c), var(--c)) bottom right,
+        linear-gradient(var(--c), var(--c)) bottom right;
+    background-size: var(--b) var(--w), var(--w) var(--b);
+    background-origin: border-box;
+    background-repeat: no-repeat;
+}
+
+.player22 {
+    width: 43px;
+    height: 85px;
+    border: 1.5px solid rgb(247, 9, 9);
+    position: absolute;
+    left: 755px;
+    top: 412px;
+}
+
+div {
+    position: relative;
+}
+
+.videoPosition {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 90%;
+    z-index: -1;
+
+}
+
+.drawbox {
+    position: absolute;
+}

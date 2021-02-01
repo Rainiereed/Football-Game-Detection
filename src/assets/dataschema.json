@@ -1,0 +1,53 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "array",
+    "items": {
+        "$ref": "#/definitions/FrameElement"
+    },
+    "definitions": {
+        "FrameElement": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "utc_time": {
+                    "type": "integer",
+                    "description": "epochtime in millisecond (UTC timezone)"
+                },
+                "ball": {
+                    "anyOf": [
+                        {
+                            "type": "array",
+                            "description": "[X,Y] coordinates in pixels of the position of the ball in the frame",
+                            "minItems": 2,
+                            "maxItems": 2,
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "detections": {
+                    "type": "array",
+                    "minItems": 4,
+                    "maxItems": 4,
+                    "description": "[LEFT,TOP,WIDTH,HEIGHT] coordinates in pixels of the detected players",
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "integer"
+                        }
+                    }
+                }
+            },
+            "required": [
+                "ball",
+                "detections",
+                "utc_time"
+            ],
+            "title": "FrameElement"
+        }
+    }
+}
