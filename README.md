@@ -1,70 +1,13 @@
-# Getting Started with Create React App
+1. I have managed to finish the task, displayed a video player, click anywhere to play and pause and for each frame the ball and players are marked with rectangles. You can see the screen recording attached with the email.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+2. The current problem is after pause and replay, the overlay bounding boxes paused but if play again not sync with the video. The bounding boxes start to move from biginning again. (spend lots of time on this, but still can't solve it)
 
-## Available Scripts
+3. Another problem is there are different number of players in different frames. I haven't figure out how to solve this problem. I have to only choose the first 22 data of each frame. 
 
-In the project directory, you can run:
+4. I resized the pixels in the data in order to see the effect in my 13 inch laptop screen. And manually adjsted pixels position for the starting frame in CSS file(it just give a nicer look, wasted a lot of time on it). I assume that the data offered is for bigger screen. The data of the ball have some problems, some with null and the frames in the end seems not correct, they are far from the place the ball should be. 
 
-### `yarn start`
+5. I tried to use canvas, p5.js to draw the rectangles at first, but change to CSS again after I find a way to only draw four corners of rectangle
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+6. I also tried to use some libraries such as video.js(to add different playback speed, but this need to configure different bounding boxes speed, didn't get enough time to test), and bideo.js(play video as background, it's responsive to different devices, but the data pixels position are fixed)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+7. It's a very interesting task! Lots of fun and learnings! A lot of time also goes to the AI object detection research and I find lots of similar interesting projects. I tried to use Svelte first, but get stuck with an error "[svelte-preprocess] Encountered type error". Don't know how to fix it, then have to move to React. In total, I spent 3 days for this task, including all the researches, Svelte tutorials, TypeScript tutorials and unsolved problems. Could you please give me some solutions about how did you and other candidetes do with this task? Thanks! 
