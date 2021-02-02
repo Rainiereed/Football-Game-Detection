@@ -6,6 +6,9 @@ import data from '../assets/data.json';
 function Video() {
 	var timerID: any;
 	let frame = 0;
+	var video = document.createElement("video");
+	video.currentTime = 1600708032970;
+
 	function play(e: any) {
 		// set the overlay same size as the video 
 		const mydiv = e.target.parentNode.querySelector("div");
@@ -36,12 +39,10 @@ function Video() {
 		const player19 = mydiv.querySelector(".player19");
 		const player20 = mydiv.querySelector(".player20");
 		const player21 = mydiv.querySelector(".player21");
-		//const player22 = mydiv.querySelector(".player22");
-		var video = document.createElement("video");
-		video.currentTime = data[frame].utc_time;
-
+		//const player22 = mydiv.querySelector(".player22");		
+		
 		const step = () => {
-			
+			if (frame === 250) { frame = 0}
 			if (frame < data.length && data[frame].ball) {
 				// @ts-ignore
 				ball.style.left = data[frame].ball[0] / 2.7 + "px";
@@ -142,21 +143,22 @@ function Video() {
 
 				//console.log(data[frame].detections[21]);
 				//console.log(data[frame].detections[22]);
-				
-				// if it runs faster
+										
+			}
+			frame++;			
+			video.currentTime += 40;
+
+			// The setInterval accuracy problem
+			/*// if it runs faster
 				if (video.currentTime < data[frame].utc_time){
 					frame--;
 				}	
-				video.currentTime += 40;
-
-				// if it runs slowlier
+			// if it runs slowlier
 				if (video.currentTime > data[frame].utc_time){					
 					frame++;
-				}	
-				console.log(video.currentTime);	
-				console.log(data[frame].utc_time);							
-			}
-			frame++;
+				}	*/
+			console.log(video.currentTime);	
+			//console.log(data[frame].utc_time); 	
 
 			/*if(index<24) {
 				player0.style.left = data[frame].detections[index][0] / 3 + "px";
