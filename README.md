@@ -1,8 +1,6 @@
 I have managed to finish the task, displayed a video player, click anywhere to play and pause and for each frame the ball and players are marked with rectangles. You can see the screen recording attached with the email.
 
-The current problem is after pause and replay, the overlay bounding boxes paused but if play again not sync with the video. The bounding boxes start to move from beginning again. (spend lots of time on this, but still can't solve it)
-
-Another problem is there are different number of players in different frames. I haven't figure out how to solve this problem. I have to only choose the first 22 data of each frame.
+The problem is there are different number of players in different frames. I haven't figure out how to solve this problem. I have to only choose the first 22 data of each frame.
 
 I resized the pixels in the data in order to see the effect in my 13 inch laptop screen. And manually adjusted pixels position for the starting frame in CSS file(it just gives a nicer look, wasted a lot of time on it). I assume that the data offered is for bigger screen. The data of the ball have some problems, some with null and the frames in the end seems not correct, they are far from the place the ball should be.
 
