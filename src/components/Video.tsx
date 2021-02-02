@@ -5,13 +5,13 @@ import data from '../assets/data.json';
 
 function Video() {
 	var timerID: any;
-	
+	let frame = 0;
 	function play(e: any) {
 		// set the overlay same size as the video 
 		const mydiv = e.target.parentNode.querySelector("div");
 		mydiv.style.width = e.target.clientWidth + "px";
 		mydiv.style.height = e.target.clientHeight + "px";
-		let frame = 0;
+		
 		//let index = 0;
 		const ball = mydiv.querySelector(".ball");
 		const player0 = mydiv.querySelector(".player0");
@@ -38,7 +38,7 @@ function Video() {
 		const player21 = mydiv.querySelector(".player21");
 		//const player22 = mydiv.querySelector(".player22");
 		var video = document.createElement("video");
-		video.currentTime = 0;
+		video.currentTime = data[frame].utc_time;
 
 		const step = () => {
 			
@@ -143,8 +143,18 @@ function Video() {
 				//console.log(data[frame].detections[21]);
 				//console.log(data[frame].detections[22]);
 				
-				video.currentTime += 0.04;	
-				console.log(video.currentTime);							
+				// if it runs faster
+				if (video.currentTime < data[frame].utc_time){
+					frame--;
+				}	
+				video.currentTime += 40;
+
+				// if it runs slowlier
+				if (video.currentTime > data[frame].utc_time){					
+					frame++;
+				}	
+				console.log(video.currentTime);	
+				console.log(data[frame].utc_time);							
 			}
 			frame++;
 
