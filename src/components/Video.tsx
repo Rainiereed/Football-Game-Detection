@@ -8,38 +8,20 @@ function Video() {
 	let frame = 0;
 	var video = document.createElement("video");
 	video.currentTime = 1600708032970;
-
-	function play(e: any) {
+    function play() {
+	//function play(e: any) {
 		// set the overlay same size as the video 
-		const mydiv = e.target.parentNode.querySelector("div");
-		mydiv.style.width = e.target.clientWidth + "px";
-		mydiv.style.height = e.target.clientHeight + "px";
+		//const mydiv = e.target.parentNode.querySelector("div");
+		//mydiv.style.width = e.target.clientWidth + "px";
+		//mydiv.style.height = e.target.clientHeight + "px";
 		
 		//let index = 0;
-		const ball = mydiv.querySelector(".ball");
-		const player0 = mydiv.querySelector(".player0");
-		const player1 = mydiv.querySelector(".player1");
-		const player2 = mydiv.querySelector(".player2");
-		const player3 = mydiv.querySelector(".player3");
-		const player4 = mydiv.querySelector(".player4");
-		const player5 = mydiv.querySelector(".player5");
-		const player6 = mydiv.querySelector(".player6");
-		const player7 = mydiv.querySelector(".player7");
-		const player8 = mydiv.querySelector(".player8");
-		const player9 = mydiv.querySelector(".player9");
-		const player10 = mydiv.querySelector(".player10");
-		const player11 = mydiv.querySelector(".player11");
-		const player12 = mydiv.querySelector(".player12");
-		const player13 = mydiv.querySelector(".player13");
-		const player14 = mydiv.querySelector(".player14");
-		const player15 = mydiv.querySelector(".player15");
-		const player16 = mydiv.querySelector(".player16");
-		const player17 = mydiv.querySelector(".player17");
-		const player18 = mydiv.querySelector(".player18");
-		const player19 = mydiv.querySelector(".player19");
-		const player20 = mydiv.querySelector(".player20");
-		const player21 = mydiv.querySelector(".player21");
-		//const player22 = mydiv.querySelector(".player22");		
+		const ball: any = document.querySelector(".ball");
+		const players: any = [];
+		let i;
+		for(i=0; i<22; i++) {
+                   players.push(document.querySelector(`.player${i}`)) 
+		}		
 		
 		const step = () => {
 			if (frame === 250) { frame = 0}
@@ -48,98 +30,98 @@ function Video() {
 				ball.style.left = data[frame].ball[0] / 2.7 + "px";
 				// @ts-ignore
 				ball.style.top = data[frame].ball[1] / 3.1 + "px";
-				player0.style.left = data[frame].detections[0][0] / 2.67 + "px";
-				player0.style.top = data[frame].detections[0][1] / 3 + "px";
-				player0.style.width = data[frame].detections[0][2] / 3 + "px";
-				player0.style.height = data[frame].detections[0][3] / 3.2 + "px";
-				player1.style.left = data[frame].detections[1][0] / 2.75 + "px";
-				player1.style.top = data[frame].detections[1][1] / 3 + "px";
-				player1.style.width = data[frame].detections[1][2] / 3 + "px";
-				player1.style.height = data[frame].detections[1][3] / 3.2 + "px";
-				player2.style.left = data[frame].detections[2][0] / 2.5 + "px";
-				player2.style.top = data[frame].detections[2][1] / 3 + "px";
-				player2.style.width = data[frame].detections[2][2] / 3 + "px";
-				player2.style.height = data[frame].detections[2][3] / 3.2 + "px";
-				player3.style.left = data[frame].detections[3][0] / 2.75 + "px";
-				player3.style.top = data[frame].detections[3][1] / 3 + "px";
-				player3.style.width = data[frame].detections[3][2] / 3 + "px";
-				player3.style.height = data[frame].detections[3][3] / 3.2 + "px";
-				player4.style.left = data[frame].detections[4][0] / 2.75 + "px";
-				player4.style.top = data[frame].detections[4][1] / 3 + "px";
-				player4.style.width = data[frame].detections[4][2] / 3 + "px";
-				player4.style.height = data[frame].detections[4][3] / 3.2 + "px";
-				player5.style.left = data[frame].detections[5][0] / 2.55 + "px";
-				player5.style.top = data[frame].detections[5][1] / 3 + "px";
-				player5.style.width = data[frame].detections[5][2] / 3 + "px";
-				player5.style.height = data[frame].detections[5][3] / 3.2 + "px";
-				player6.style.left = data[frame].detections[6][0] / 2.55 + "px";
-				player6.style.top = data[frame].detections[6][1] / 3 + "px";
-				player6.style.width = data[frame].detections[6][2] / 3 + "px";
-				player6.style.height = data[frame].detections[6][3] / 3.2 + "px";
-				player7.style.left = data[frame].detections[7][0] / 2.7 + "px";
-				player7.style.top = data[frame].detections[7][1] / 3 + "px";
-				player7.style.width = data[frame].detections[7][2] / 3 + "px";
-				player7.style.height = data[frame].detections[7][3] / 3.2 + "px";
-				player8.style.left = data[frame].detections[8][0] / 2.7 + "px";
-				player8.style.top = data[frame].detections[8][1] / 3 + "px";
-				player8.style.width = data[frame].detections[8][2] / 3 + "px";
-				player8.style.height = data[frame].detections[8][3] / 3.2 + "px";
-				player9.style.left = data[frame].detections[9][0] / 2.7 + "px";
-				player9.style.top = data[frame].detections[9][1] / 3 + "px";
-				player9.style.width = data[frame].detections[9][2] / 3 + "px";
-				player9.style.height = data[frame].detections[9][3] / 3.2 + "px";
-				player10.style.left = data[frame].detections[10][0] / 2.6 + "px";
-				player10.style.top = data[frame].detections[10][1] / 3 + "px";
-				player10.style.width = data[frame].detections[10][2] / 3 + "px";
-				player10.style.height = data[frame].detections[10][3] / 3.2 + "px";
-				player11.style.left = data[frame].detections[11][0] / 2.7 + "px";
-				player11.style.top = data[frame].detections[11][1] / 3 + "px";
-				player11.style.width = data[frame].detections[11][2] / 3 + "px";
-				player11.style.height = data[frame].detections[11][3] / 3.2 + "px";
-				player12.style.left = data[frame].detections[12][0] / 2.7 + "px";
-				player12.style.top = data[frame].detections[12][1] / 3 + "px";
-				player12.style.width = data[frame].detections[12][2] / 3 + "px";
-				player12.style.height = data[frame].detections[12][3] / 3.2 + "px";
-				player13.style.left = data[frame].detections[13][0] / 2.8 + "px";
-				player13.style.top = data[frame].detections[13][1] / 3 + "px";
-				player13.style.width = data[frame].detections[13][2] / 3 + "px";
-				player13.style.height = data[frame].detections[13][3] / 3.2 + "px";
-				player14.style.left = data[frame].detections[14][0] / 2.8 + "px";
-				player14.style.top = data[frame].detections[14][1] / 3 + "px";
-				player14.style.width = data[frame].detections[14][2] / 3 + "px";
-				player14.style.height = data[frame].detections[14][3] / 3.2 + "px";
-				player15.style.left = data[frame].detections[15][0] / 2.75 + "px";
-				player15.style.top = data[frame].detections[15][1] / 3 + "px";
-				player15.style.width = data[frame].detections[15][2] / 3 + "px";
-				player15.style.height = data[frame].detections[15][3] / 3.2 + "px";
-				player16.style.left = data[frame].detections[16][0] / 2.8 + "px";
-				player16.style.top = data[frame].detections[16][1] / 3 + "px";
-				player16.style.width = data[frame].detections[16][2] / 3 + "px";
-				player16.style.height = data[frame].detections[16][3] / 3.2 + "px";
-				player17.style.left = data[frame].detections[17][0] / 2.8 + "px";
-				player17.style.top = data[frame].detections[17][1] / 3 + "px";
-				player17.style.width = data[frame].detections[17][2] / 3 + "px";
-				player17.style.height = data[frame].detections[17][3] / 3.2 + "px";
-				player18.style.left = data[frame].detections[18][0] / 2.8 + "px";
-				player18.style.top = data[frame].detections[18][1] / 3 + "px";
-				player18.style.width = data[frame].detections[18][2] / 3 + "px";
-				player18.style.height = data[frame].detections[18][3] / 3.2 + "px";
-				player19.style.left = data[frame].detections[19][0] / 2.8 + "px";
-				player19.style.top = data[frame].detections[19][1] / 3 + "px";
-				player19.style.width = data[frame].detections[19][2] / 3 + "px";
-				player19.style.height = data[frame].detections[19][3] / 3.2 + "px";
-				player20.style.left = data[frame].detections[20][0] / 2.8 + "px";
-				player20.style.top = data[frame].detections[20][1] / 3 + "px";
-				player20.style.width = data[frame].detections[20][2] / 3 + "px";
-				player20.style.height = data[frame].detections[20][3] / 3.2 + "px";
-				player21.style.left = data[frame].detections[21][0] / 2.8 + "px";
-				player21.style.top = data[frame].detections[21][1] / 3 + "px";
-				player21.style.width = data[frame].detections[21][2] / 3 + "px";
-				player21.style.height = data[frame].detections[21][3] / 3.2 + "px";
-				//player22.style.left = data[frame].detections[22][0] / 2.5 + "px";
-				//player22.style.top = data[frame].detections[22][1] / 3 + "px";
-				//player22.style.width = data[frame].detections[22][2] / 3 + "px";
-				//player22.style.height = data[frame].detections[22][3] / 3.2 + "px";
+				players[0].style.left = data[frame].detections[0][0] / 2.67 + "px";
+				players[0].style.top = data[frame].detections[0][1] / 3 + "px";
+				players[0].style.width = data[frame].detections[0][2] / 3 + "px";
+				players[0].style.height = data[frame].detections[0][3] / 3.2 + "px";
+				players[1].style.left = data[frame].detections[1][0] / 2.75 + "px";
+				players[1].style.top = data[frame].detections[1][1] / 3 + "px";
+				players[1].style.width = data[frame].detections[1][2] / 3 + "px";
+				players[1].style.height = data[frame].detections[1][3] / 3.2 + "px";
+				players[2].style.left = data[frame].detections[2][0] / 2.5 + "px";
+				players[2].style.top = data[frame].detections[2][1] / 3 + "px";
+				players[2].style.width = data[frame].detections[2][2] / 3 + "px";
+				players[2].style.height = data[frame].detections[2][3] / 3.2 + "px";
+				players[3].style.left = data[frame].detections[3][0] / 2.75 + "px";
+				players[3].style.top = data[frame].detections[3][1] / 3 + "px";
+				players[3].style.width = data[frame].detections[3][2] / 3 + "px";
+				players[3].style.height = data[frame].detections[3][3] / 3.2 + "px";
+				players[4].style.left = data[frame].detections[4][0] / 2.75 + "px";
+				players[4].style.top = data[frame].detections[4][1] / 3 + "px";
+				players[4].style.width = data[frame].detections[4][2] / 3 + "px";
+				players[4].style.height = data[frame].detections[4][3] / 3.2 + "px";
+				players[5].style.left = data[frame].detections[5][0] / 2.55 + "px";
+				players[5].style.top = data[frame].detections[5][1] / 3 + "px";
+				players[5].style.width = data[frame].detections[5][2] / 3 + "px";
+				players[5].style.height = data[frame].detections[5][3] / 3.2 + "px";
+				players[6].style.left = data[frame].detections[6][0] / 2.55 + "px";
+				players[6].style.top = data[frame].detections[6][1] / 3 + "px";
+				players[6].style.width = data[frame].detections[6][2] / 3 + "px";
+				players[6].style.height = data[frame].detections[6][3] / 3.2 + "px";
+				players[7].style.left = data[frame].detections[7][0] / 2.7 + "px";
+				players[7].style.top = data[frame].detections[7][1] / 3 + "px";
+				players[7].style.width = data[frame].detections[7][2] / 3 + "px";
+				players[7].style.height = data[frame].detections[7][3] / 3.2 + "px";
+				players[8].style.left = data[frame].detections[8][0] / 2.7 + "px";
+				players[8].style.top = data[frame].detections[8][1] / 3 + "px";
+				players[8].style.width = data[frame].detections[8][2] / 3 + "px";
+				players[8].style.height = data[frame].detections[8][3] / 3.2 + "px";
+				players[9].style.left = data[frame].detections[9][0] / 2.7 + "px";
+				players[9].style.top = data[frame].detections[9][1] / 3 + "px";
+				players[9].style.width = data[frame].detections[9][2] / 3 + "px";
+				players[9].style.height = data[frame].detections[9][3] / 3.2 + "px";
+				players[10].style.left = data[frame].detections[10][0] / 2.6 + "px";
+				players[10].style.top = data[frame].detections[10][1] / 3 + "px";
+				players[10].style.width = data[frame].detections[10][2] / 3 + "px";
+				players[10].style.height = data[frame].detections[10][3] / 3.2 + "px";
+				players[11].style.left = data[frame].detections[11][0] / 2.7 + "px";
+				players[11].style.top = data[frame].detections[11][1] / 3 + "px";
+				players[11].style.width = data[frame].detections[11][2] / 3 + "px";
+				players[11].style.height = data[frame].detections[11][3] / 3.2 + "px";
+				players[12].style.left = data[frame].detections[12][0] / 2.7 + "px";
+				players[12].style.top = data[frame].detections[12][1] / 3 + "px";
+				players[12].style.width = data[frame].detections[12][2] / 3 + "px";
+				players[12].style.height = data[frame].detections[12][3] / 3.2 + "px";
+				players[13].style.left = data[frame].detections[13][0] / 2.8 + "px";
+				players[13].style.top = data[frame].detections[13][1] / 3 + "px";
+				players[13].style.width = data[frame].detections[13][2] / 3 + "px";
+				players[13].style.height = data[frame].detections[13][3] / 3.2 + "px";
+				players[14].style.left = data[frame].detections[14][0] / 2.8 + "px";
+				players[14].style.top = data[frame].detections[14][1] / 3 + "px";
+				players[14].style.width = data[frame].detections[14][2] / 3 + "px";
+				players[14].style.height = data[frame].detections[14][3] / 3.2 + "px";
+				players[15].style.left = data[frame].detections[15][0] / 2.75 + "px";
+				players[15].style.top = data[frame].detections[15][1] / 3 + "px";
+				players[15].style.width = data[frame].detections[15][2] / 3 + "px";
+				players[15].style.height = data[frame].detections[15][3] / 3.2 + "px";
+				players[16].style.left = data[frame].detections[16][0] / 2.8 + "px";
+				players[16].style.top = data[frame].detections[16][1] / 3 + "px";
+				players[16].style.width = data[frame].detections[16][2] / 3 + "px";
+				players[16].style.height = data[frame].detections[16][3] / 3.2 + "px";
+				players[17].style.left = data[frame].detections[17][0] / 2.8 + "px";
+				players[17].style.top = data[frame].detections[17][1] / 3 + "px";
+				players[17].style.width = data[frame].detections[17][2] / 3 + "px";
+				players[17].style.height = data[frame].detections[17][3] / 3.2 + "px";
+				players[18].style.left = data[frame].detections[18][0] / 2.8 + "px";
+				players[18].style.top = data[frame].detections[18][1] / 3 + "px";
+				players[18].style.width = data[frame].detections[18][2] / 3 + "px";
+				players[18].style.height = data[frame].detections[18][3] / 3.2 + "px";
+				players[19].style.left = data[frame].detections[19][0] / 2.8 + "px";
+				players[19].style.top = data[frame].detections[19][1] / 3 + "px";
+				players[19].style.width = data[frame].detections[19][2] / 3 + "px";
+				players[19].style.height = data[frame].detections[19][3] / 3.2 + "px";
+				players[20].style.left = data[frame].detections[20][0] / 2.8 + "px";
+				players[20].style.top = data[frame].detections[20][1] / 3 + "px";
+				players[20].style.width = data[frame].detections[20][2] / 3 + "px";
+				players[20].style.height = data[frame].detections[20][3] / 3.2 + "px";
+				players[21].style.left = data[frame].detections[21][0] / 2.8 + "px";
+				players[21].style.top = data[frame].detections[21][1] / 3 + "px";
+				players[21].style.width = data[frame].detections[21][2] / 3 + "px";
+				players[21].style.height = data[frame].detections[21][3] / 3.2 + "px";
+				//players[22].style.left = data[frame].detections[22][0] / 2.5 + "px";
+				//players[22].style.top = data[frame].detections[22][1] / 3 + "px";
+				//players[22].style.width = data[frame].detections[22][2] / 3 + "px";
+				//players[22].style.height = data[frame].detections[22][3] / 3.2 + "px";
 
 				//console.log(data[frame].detections[21]);
 				//console.log(data[frame].detections[22]);
@@ -161,10 +143,10 @@ function Video() {
 			//console.log(data[frame].utc_time); 	
 
 			/*if(index<24) {
-				player0.style.left = data[frame].detections[index][0] / 3 + "px";
-				player0.style.top = data[frame].detections[index][1] / 3 + "px";
-				player0.style.width = data[frame].detections[index][2]  + "px";
-				player0.style.height = data[frame].detections[index][3]  + "px";
+				players[0].style.left = data[frame].detections[index][0] / 3 + "px";
+				players[0].style.top = data[frame].detections[index][1] / 3 + "px";
+				players[0].style.width = data[frame].detections[index][2]  + "px";
+				players[0].style.height = data[frame].detections[index][3]  + "px";
 				console.log(data[frame].detections);
 			}
 			index++;*/
@@ -184,6 +166,11 @@ function Video() {
 	function stopTimer() {
 		clearInterval(timerID);
 		
+	}
+
+	function replay() {
+		video.currentTime = 1600708032970;
+		play();
 	}
 
 	return (
@@ -214,8 +201,9 @@ function Video() {
 				<div className="player19"></div>
 				<div className="player20"></div>
 				<div className="player21"></div>
-
+                
 			</div>
+            {/*<button className="replay" onClick={replay}>Restart</button>*/}
 
 			<video className="videoPosition"
 				src={left} controls 
